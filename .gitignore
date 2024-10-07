@@ -1,0 +1,29 @@
+# Python
+*.py[cod]
+*.pyo
+__pycache__/
+
+# Virtual environments
+venv/
+env/
+
+# Configuration files
+.env
+config.py
+instance/
+
+# Database files
+*.sqlite3
+*.db
+
+# Logs
+*.log
+logs/
+
+# IDE settings
+.idea/
+.vscode/
+
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+

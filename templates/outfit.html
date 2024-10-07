@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outfit Suggestion - MindEase</title>
+</head>
+<body>
+    <h1>Outfit Selector</h1>
+    <form method="POST">
+        <label for="city">Enter your city:</label>
+        <input type="text" id="city" name="city" required><br>
+
+        <label for="occasion">What's the occasion (e.g., casual day, meeting):</label>
+        <input type="text" id="occasion" name="occasion" required><br>
+
+        <input type="submit" value="Get Outfit Suggestion">
+    </form>
+
+    {% if outfit %}
+        <h2>Suggested Outfit:</h2>
+        <p>{{ outfit }}</p>
+    {% endif %}
+</body>
+</html>

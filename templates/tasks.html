@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Prioritization - MindEase</title>
+</head>
+<body>
+    <h1>Task Prioritizer</h1>
+    <form method="POST">
+        <label for="tasks">Enter your tasks (comma-separated):</label>
+        <input type="text" id="tasks" name="tasks" required><br>
+
+        <input type="submit" value="Prioritize Tasks">
+    </form>
+
+    {% if prioritization %}
+        <h2>Prioritized Tasks:</h2>
+        <p>{{ prioritization }}</p>
+    {% endif %}
+</body>
+</html>

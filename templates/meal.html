@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Planning - MindEase</title>
+</head>
+<body>
+    <h1>Meal Planner</h1>
+    <form method="POST">
+        <label for="preferences">Your Preferences (e.g., vegan, quick):</label>
+        <input type="text" id="preferences" name="preferences" required><br>
+
+        <label for="recent_meals">Recent Meals (e.g., pasta twice):</label>
+        <input type="text" id="recent_meals" name="recent_meals" required><br>
+
+        <input type="submit" value="Get Meal Suggestion">
+    </form>
+
+    {% if suggestion %}
+        <h2>Suggested Meal:</h2>
+        <p>{{ suggestion }}</p>
+    {% endif %}
+</body>
+</html>
