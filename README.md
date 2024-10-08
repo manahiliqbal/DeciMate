@@ -1,4 +1,4 @@
-# AI Assistant for Reducing Decision Fatigue (Outfit, Meal, and Task Planning)
+# AI Assistant for Reducing Decision Fatigue
 
 Project Overview
 
