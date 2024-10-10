@@ -1,0 +1,15 @@
+[theme]
+primaryColor = "#8EC5FC"             # Bluish-pink gradient color
+backgroundColor = "#E0C3FC"          # Background color to match the gradient
+secondaryBackgroundColor = "#F5F5F5" # Lighter color for the sidebar or other sections
+textColor = "#333333"                # Darker text color for readability
+font = "Roboto"               
+
+[server]
+headless = true                       # Set to true to deploy on a remote server
+port = 8501                           # Default port for Streamlit
+enableCORS = false                    # Disable CORS (important when deploying)
+
+[global]
+# Enable/disable wide mode for Streamlit's layout
+wideMode = true
