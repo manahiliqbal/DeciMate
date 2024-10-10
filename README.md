@@ -1,4 +1,4 @@
-# Decimate: an AI Assistant for Reducing Decision Fatigue
+# DeciMate: an AI Assistant for Reducing Decision Fatigue
 
 Project Overview
 
