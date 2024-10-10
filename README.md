@@ -31,14 +31,17 @@ Tech Stack
 
 1. *Backend*: 
 - **Flask**: We use Flask to create a lightweight, flexible backend that serves the AI recommendations and manages user interactions.
+
+2. *Frontend*: 
+- **Streamlit**: We use Streamlit to create a bright playful frontend that displays the AI recommendations and manages user experience.
   
-2. *Database*:
+3. *Database*:
 - *PostgreSQL**: User data, preferences, and patterns are stored and managed using PostgreSQL. The database stores information about past decisions, outfits, meals, and tasks for personalized recommendations.
   
-3. *Machine Learning*:
+4. *Machine Learning*:
 - The AI leverages *simple recommendation algorithms* based on user feedback and past behaviors, improving over time through usage.
   
-4. *APIs*:
+5. *APIs*:
 - **Weather API**: To provide context-based outfit recommendations depending on the daily weather.
 - **Calendar API**: To help the AI analyze the user's schedule and provide task prioritization and outfit suggestions based on upcoming events.
 
