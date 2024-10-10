@@ -36,7 +36,7 @@ Tech Stack
 - **Streamlit**: We use Streamlit to create a bright playful frontend that displays the AI recommendations and manages user experience.
   
 3. *Database*:
-- *PostgreSQL**: User data, preferences, and patterns are stored and managed using PostgreSQL. The database stores information about past decisions, outfits, meals, and tasks for personalized recommendations.
+- **PostgreSQL**: User data, preferences, and patterns are stored and managed using PostgreSQL. The database stores information about past decisions, outfits, meals, and tasks for personalized recommendations.
   
 4. *Machine Learning*:
 - The AI leverages *simple recommendation algorithms* based on user feedback and past behaviors, improving over time through usage.
