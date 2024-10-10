@@ -1,6 +1,82 @@
 import streamlit as st
 import requests
 
+st.markdown(
+    """
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+    /* Gradient background and font styling */
+    .stApp{
+        background: linear-gradient(135deg, #8A00D4, #D464FF, #38B6FF, #AC00D4);  
+        background-size: 400% 400%;
+        animation: gradientAnimation 20s ease infinite;
+        font-family: 'Orbitron', sans-serif; 
+    }
+
+    @keyframes gradientAnimation {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    /* Styling input fields */
+    input[type="text"], textarea {
+        background-color: rgba(255, 255, 255, 0.8) !important;
+        border: 2px solid #38B6FF !important;
+        border-radius: 5px !important;
+        padding: 10px !important;
+        color: #AC00D4 !important;
+        font-family: 'Orbitron', sans-serif !important;
+        font-size: 14px !important;
+        outline: none !important;
+    }
+    
+    input[type="text"]::placeholder, textarea::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    input[type="text"]:focus, textarea:focus {
+        border-color: #D464FF;
+        box-shadow: 0 0 10px #D464FF;
+    }
+
+    /* Styling buttons */
+    div.stButton > button {
+        background-color: #D464FF;
+        color: white;
+        border: 2px solid #38B6FF;
+        padding: 10px 20px;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    div.stButton > button:hover {
+        background-color: #D464FF;
+        box-shadow: 0 0 20px #38B6FF;
+    }
+
+    div.stButton > button:active {
+        background-color: #38B6FF;
+        box-shadow: 0 0 10px #D464FF inset;
+    }
+
+    .main .block-container {
+        background: transparent !important;
+        padding: 20px;
+    }
+
+    h1, h2, h3, p, li {
+        font-family: 'Orbitron', sans-serif; 
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # Set Flask backend URL
 FLASK_BACKEND_URL = "http://127.0.0.1:5000"
 
