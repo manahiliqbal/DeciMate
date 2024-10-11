@@ -1,7 +1,7 @@
 import streamlit as st
 from pymongo import MongoClient
 from werkzeug.security import generate_password_hash, check_password_hash
-import main  
+import app  
 
 # MongoDB connection
 client = MongoClient("mongodb+srv://manahil0511:cHgNWcu0egmGNHAJ@cluster0.mh5yv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
@@ -67,7 +67,7 @@ def logout():
 # Function to refresh content based on login status
 def reroute_content():
     if st.session_state.authenticated:
-        main.show_main_app()  # This will display the content from main.py
+        app.show_main_app()  # This will display the content from app.py
         st.button("Logout", on_click=logout)
     else:
         # Show the signup/login page
@@ -119,6 +119,6 @@ if not st.session_state.authenticated:
                 st.error("Username does not exist.")
 
 else:
-    main.show_main_app()  
+    app.show_main_app()  
     st.button("Logout", on_click=logout)
     

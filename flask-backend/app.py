@@ -61,23 +61,6 @@ def login():
 # Initialize OpenAI with the API key
 api_key = app.config['OPENAI_API_KEY']
 
-# Middleware: JWT Verification for Clerk.js
-@app.before_request
-def verify_token():
-    auth_header = request.headers.get('Authorization')
-    if auth_header:
-        token = auth_header.split()[1]  # Bearer <token>
-        try:
-            # Decode the token (optional: use Clerk's public keys for signature verification)
-            decoded_token = jwt.decode(token, options={"verify_signature": False})
-            request.user = decoded_token
-        except jwt.ExpiredSignatureError:
-            return jsonify({'message': 'Token has expired.'}), 401
-        except jwt.InvalidTokenError:
-            return jsonify({'message': 'Invalid token.'}), 401
-    else:
-        return jsonify({'message': 'Authorization header missing.'}), 401
-
 # Route: Home 
 @app.route('/')
 def home():
