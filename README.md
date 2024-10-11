@@ -36,89 +36,13 @@ Tech Stack
 - **Streamlit**: We use Streamlit to create a bright playful frontend that displays the AI recommendations and manages user experience.
   
 3. *Database*:
-- **PostgreSQL**: User data, preferences, and patterns are stored and managed using PostgreSQL. The database stores information about past decisions, outfits, meals, and tasks for personalized recommendations.
+- **MongoDB**: User data, pis stored and managed using MongoDB. The database stores login and signup information.
   
 4. *Machine Learning*:
 - The AI leverages *simple recommendation algorithms* based on user feedback and past behaviors, improving over time through usage.
   
 5. *APIs*:
 - **Weather API**: To provide context-based outfit recommendations depending on the daily weather.
-- **Calendar API**: To help the AI analyze the user's schedule and provide task prioritization and outfit suggestions based on upcoming events.
-
-
-
-Installation and Setup
-
-1. Clone the repository
-```bash
-git clone https://github.com/your-repo/ai-decision-assistant.git
-cd ai-decision-assistant
-```
-
-2. Set up virtual environment
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
-3. Install required packages
-```bash
-pip install -r requirements.txt
-```
-
-4. Set up PostgreSQL database
-- Install PostgreSQL if not already installed.
-- Create a new PostgreSQL database and user.
-- Update the `config.py` file with your PostgreSQL database credentials.
-  
-```bash
-# config.py
-SQLALCHEMY_DATABASE_URI = 'postgresql://<username>:<password>@localhost/<database>'
-```
-
-5. Set up environment variables (optional)
-Create a `.env` file to store sensitive environment variables like API keys for weather integration.
-
-```bash
-WEATHER_API_KEY=your-weather-api-key
-CALENDAR_API_KEY=your-calendar-api-key
-```
-
-#### 6. Initialize the database
-```bash
-flask db init
-flask db migrate
-flask db upgrade
-```
-
-7. Run the Flask app
-```bash
-flask run
-```
-
----
-
-Usage Instructions
-
-1. *Initial Setup*: 
-   - When the user first interacts with the assistant, they'll be asked to input their preferences for meals (dietary restrictions, favorite meals), outfit styles, and task management priorities (e.g., deadlines, project importance).
-   
-2. *Daily Interaction*: 
-   - The user can ask the assistant for a meal suggestion, outfit recommendation, or task prioritization. The assistant will offer suggestions based on context and past behaviors.
-
-3. *Personalization and Feedback*: 
-   - The AI learns over time by tracking user responses and preferences, allowing for more refined and accurate suggestions as the user continues to interact.
-
-
-
-API Endpoints
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET`  | `/outfit`    | Get daily outfit recommendation based on user preferences and weather. |
-| `GET`  | `/meal`      | Get a meal suggestion based on preferences and available ingredients. |
-| `GET`  | `/tasks`     | Get a prioritized task list based on deadlines and importance. |
-| `POST` | `/feedback`  | Submit feedback on suggestions to improve future recommendations. |
 
 
 Future Improvements
