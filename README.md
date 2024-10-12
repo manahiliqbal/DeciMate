@@ -1,6 +1,8 @@
 # DeciMate: an AI Assistant for Reducing Decision Fatigue
 App is live at: https://decimate.streamlit.app/
 
+This project was made as a part of the **Reasoning with o1 Hacckathon** by *lablab.ai*
+
 Project Overview
 This project is an AI-powered assistant designed to reduce *decision fatigue* by automating and streamlining repetitive daily decisions. For the purpose of this hackathon, the assistant focuses on three core areas:
 - *Outfit Planning*
