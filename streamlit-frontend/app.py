@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 # Define the Flask backend URL
-FLASK_BACKEND_URL = "http://127.0.0.1:5000"  # Adjust this if the Flask backend is running elsewhere
+FLASK_BACKEND_URL = "https://sheltered-bayou-84884-464b8cea4d52.herokuapp.com/"  
 
 def show_main_app():
     # Gradient background and styling
