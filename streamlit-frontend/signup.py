@@ -63,12 +63,13 @@ if 'authenticated' not in st.session_state:
 # Function to handle logout
 def logout():
     st.session_state.authenticated = False
-    st.experimental_rerun()
+    # Simulate rerun by setting a query param to trigger a rerun
+    st.experimental_set_query_params(logged_out="1")
 
 # Function to refresh content based on login status
 def reroute_content():
     if st.session_state.authenticated:
-        app.show_main_app()  
+        app.show_main_app()  # This will display the content from app.py
         st.button("Logout", on_click=logout)
     else:
         # Show the signup/login page
@@ -114,7 +115,8 @@ def show_login_signup_page():
                 if check_password_hash(user['password'], login_password):
                     st.success(f"Welcome, {login_username}!")
                     st.session_state.authenticated = True
-                    st.experimental_rerun()  # Reload page to show main app
+                    # Simulate rerun by setting a query param to trigger a rerun
+                    st.experimental_set_query_params(logged_in="1")
                 else:
                     st.error("Invalid password.")
             else:
