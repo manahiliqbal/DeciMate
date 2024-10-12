@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 import jwt  
 from flask_cors import CORS
+import requests  
 from pymongo import MongoClient
 from werkzeug.security import generate_password_hash, check_password_hash
 
