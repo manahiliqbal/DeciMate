@@ -89,7 +89,7 @@ def meal_planning():
             "model": "gpt-4",  
             "messages": [
                 {"role": "system", "content": "You are a helpful assistant for meal planning."},
-                {"role": "user", "content": f"Suggest a dinner based on these preferences: {preferences}. The user has eaten {recent_meals} this week."}
+                {"role": "user", "content": f"Suggest a meal based on these preferences: {preferences}. The user has eaten {recent_meals} this week."}
             ]
         }
     )

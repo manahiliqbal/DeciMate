@@ -63,18 +63,19 @@ if 'authenticated' not in st.session_state:
 # Function to handle logout
 def logout():
     st.session_state.authenticated = False
-    
+    st.experimental_rerun()
+
 # Function to refresh content based on login status
 def reroute_content():
     if st.session_state.authenticated:
-        app.show_main_app()  # This will display the content from app.py
+        app.show_main_app()  
         st.button("Logout", on_click=logout)
     else:
         # Show the signup/login page
         show_login_signup_page()
-# Show content based on login status
-if not st.session_state.authenticated:
 
+# Show content based on login status
+def show_login_signup_page():
     # Tabs for Signup and Login
     tab1, tab2 = st.tabs(["Signup", "Login"])
 
@@ -100,6 +101,7 @@ if not st.session_state.authenticated:
             else:
                 st.error("Passwords do not match!")
 
+    # Login Form
     with tab2:
         st.subheader("Login to your account")
         login_username = st.text_input("Enter Username")
@@ -112,13 +114,15 @@ if not st.session_state.authenticated:
                 if check_password_hash(user['password'], login_password):
                     st.success(f"Welcome, {login_username}!")
                     st.session_state.authenticated = True
-                    reroute_content() 
+                    st.experimental_rerun()  # Reload page to show main app
                 else:
                     st.error("Invalid password.")
             else:
                 st.error("Username does not exist.")
 
-else:
+# Main content based on authentication
+if st.session_state.authenticated:
     app.show_main_app()  
     st.button("Logout", on_click=logout)
-    
+else:
+    reroute_content()
