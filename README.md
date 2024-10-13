@@ -13,9 +13,9 @@ The assistant analyzes user preferences, behaviors, and context (e.g., weather, 
 
 Key Features
 
-1. *Outfit Planning*: The AI suggests daily outfit combinations based on the user's preferences, weather conditions, and calendar events (e.g., professional or casual attire depending on meetings).
+1. *Outfit Planning*: The AI suggests daily outfit combinations based on the user's preferences, weather conditions.
    
-2. *Meal Planning*: The assistant offers meal suggestions based on dietary preferences, available ingredients, and past choices. It can generate a grocery list if needed.
+2. *Meal Planning*: The assistant offers meal suggestions based on dietary preferences and past choices. It also generates recipes.
    
 3. *Task Prioritization*: The AI helps users organize and prioritize their daily tasks by analyzing deadlines, importance, and time available. It suggests which tasks to focus on and when to take breaks.
 
@@ -51,6 +51,7 @@ Future Improvements
 
 This project is designed as a proof of concept for the hackathon. In the future, we plan to:
 - Implement *more advanced recommendation algorithms* using machine learning to improve decision accuracy over time.
+- Integrate with calender to provide tailored outfit suggestions and prioritize tasks based on deadlines.
 - Expand the assistant to handle more decision areas like *fitness routines* or *social event planning*.
 
 Conclusion
