@@ -61,7 +61,7 @@ This AI assistant helps users reduce cognitive load by automating repetitive dec
 
 Contributors
 
-- **Manahil Iqbal**
-- **Hareem Fatima**
+- *Manahil Iqbal*
+- *Hareem Fatima*
 
 Feel free to reach out with any questions or feedback!
